@@ -168,9 +168,10 @@ if not DEBUG:
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
-LANGUAGE_CODE = 'en'
+LANGUAGE_CODE = 'nl'
 
 LANGUAGES = [
+    ('nl', 'Dutch'),
     ('en', 'English'),
 ]
 
@@ -208,3 +209,19 @@ MEDIA_ROOT = os.path.join('/data/media/')
 
 
 SITE_ID = 1
+
+
+CMS_LANGUAGES = {
+    1: [
+        {
+            'code': 'nl',
+            'name': 'Dutch',
+            'public': True,
+        },
+        {
+            'code': 'en',
+            'name': 'English',
+            'public': True,
+        },
+    ],
+}
